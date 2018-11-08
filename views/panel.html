@@ -1,0 +1,44 @@
+    <div class="split-panel" >
+        <div ng-repeat="pair in choices">
+           <div class="split-panel-box">
+               <div class="split-panel-label"><span>{{pair[0]}}:{{pair[1]}}</span></div>
+               <div class="split-panel-screen">
+                <winbutton orientation="{{orientation}}" ratio="{{pair[0]}}0"
+                position=0
+                on-click="split(pair[0] , pair[1] ,0,$link,$event);"
+                on-right-click='showBookmark(orientation,pair[0] , pair[1],0);'
+                links="links[orientation + '_' + pair[0] + '0_' + pair[1]+ '0_0']"
+                >
+                </winbutton>
+                <div class="{{orientation | lowercase}}split-panel-spacer"></div>
+                <winbutton orientation="{{orientation}}" ratio="{{pair[1]}}0"
+                on-click="split(pair[0] , pair[1] ,1,$link,$event);"
+                on-right-click='showBookmark(orientation,pair[0] , pair[1],1);'
+                links="links[orientation + '_' + pair[0] + '0_' + pair[1]+ '0_1']"
+                >
+                </winbutton>
+                <!--
+                <div class="split-panel-win hsplit-panel-win hsplit-panel-win{{pair[0]}}0"
+                     ng-click="split(pair[0] , pair[1] ,0,$event);"
+                     ng-right-click='showBookmark(pair[0] , pair[1],0);'
+                     ></div>
+                <div class="split-panel-win hsplit-panel-win hsplit-panel-win{{pair[1]}}0" 
+                     ng-click="split(pair[0] , pair[1] ,1,$event);"></div>
+               //-->                     
+               </div>
+          </div>          
+        </div>
+        
+        <div class="split-panel-box">
+            <div class="split-panel-label" align="center"><span>1</span></div>
+            <div class="split-panel-screen">
+              <!-- <div class="split-panel-win hsplit-panel-win hsplit-panel-win100" ng-click="merge()"></div>  //-->
+              <winbutton orientation="H" ratio="100" on-click="merge()"
+                    title="Merge 2 windows into a maximized window." ></winbutton>
+            </div>
+        </div>
+        
+        <div ng-include="'partials/switchmodepanel.html'"></div>
+        
+    </div>
+

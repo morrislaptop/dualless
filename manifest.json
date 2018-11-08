@@ -1,0 +1,18 @@
+{
+   "background": {
+      "scripts": [ "lib/jquery-1.7.1.min.js", "lib/require.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "logo.png",
+      "default_popup": "popup.html",
+      "default_title": "Dualless - Split / Merge Windows"
+   },
+   "description": "Dualless - For those who don't have dual monitor.",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDJU/GpCaRR9jsoGwCf8uYPruQW7eGniX0Yt5vcPiW31UQNikX619W/NkyiwBnd7OmGiGpcRxvGpNFIB5wA8aHoIOIk9R0UMndfQMtwE6bM1XrpjvUK/nk+E0oloXL5LkBji1tvwBbnKzglrvvSPhEv+XRncFP24wNqajBgDhsJjwIDAQAB",
+   "manifest_version": 2,
+   "name": "Dualless",
+   "options_page": "options.html",
+   "permissions": [ "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.4"
+}

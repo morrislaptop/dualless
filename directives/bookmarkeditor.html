@@ -1,0 +1,33 @@
+<div class="bookmark-editor">
+    <form>
+    <div class="bookmark-editor-field">
+        <div class="bookmark-editor-label">Title: </div>
+
+        <div class="bookmark-editor-content">
+        <input type='text' class="bookmark-editor-input" ng-model="title"></input>
+        </div>
+    </div>
+
+    <div class="bookmark-editor-field">
+        <div class="bookmark-editor-label">Url: </div>
+        <div class="bookmark-editor-content">
+        <input type='text' class="bookmark-editor-input" ng-model="url"></input>
+        </div>
+    </div>
+    
+    <div class="bookmark-editor-field">
+        <div class="bookmark-editor-label">Color: </div>
+        <div class="bookmark-editor-content">
+            <div class="bookmark-editor-color-picker" color-picker value="color">
+            </div><input type='text' class="bookmark-editor-color-input" ng-model="colorText"></input>        
+        </div>
+    </div>
+    </form>
+  
+    
+    <div class="bookmark-editor-color-palette">
+        <div ng-repeat="color in colors" class="bookmark-editor-color-grid" style="background-color:{{color}}" ng-click="setColor(color) "></div>
+    </div>
+
+
+</div>

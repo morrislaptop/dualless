@@ -1,0 +1,28 @@
+<div class="bookmark-container">
+    <div class="split-panel-box">
+        <div class="split-panel-label"><span>{{param1}}:{{param2}}</span></div>
+        <div class="split-panel-screen">
+            <winbutton orientation="{{orientation}}" ratio="{{param1}}0" links="buttons[0].links" disable="buttons[0].disable"></winbutton>
+            <div class="{{orientation | lowercase}}split-panel-spacer"></div>
+            <winbutton orientation="{{orientation}}" ratio="{{param2}}0" links="buttons[1].links" disable="buttons[1].disable"></winbutton>
+        </div>
+    </div>
+
+<hr style="margin: 2px 0px 2px 0px">
+
+<div style="margin:0px 0px 5px 0px" ng-show="pending && links.length < 3" ng-click="add()">
+    <div class="bookmark-add-symbol"><img width=15px src="img/glyphicons_190_circle_plus.png" style=""/></div>
+    <div class="bookmark-add-link">{{pending.title}}</div>
+    <hr style="margin: 2px 0px 2px 0px">
+</div>
+
+<bookmarklist id="bookmark-list" links="links" on-select="select($index)" selected-link="selectedLink"></bookmarklist>
+<bookmarkeditor  link="selectedLink" colors="colors"></bookmarkeditor>
+
+</div> <!-- bookmark-container //-->
+
+<div class="bookmark-footer">
+    <div ng-click="back()" class="btn" style="float:left">Back</div> 
+    <div class="btn" style="float:right" ng-disabled='links.length == 0' ng-click="open()"> Open</div>
+</div>
+

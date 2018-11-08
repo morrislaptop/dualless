@@ -1,0 +1,42 @@
+.bookmark-container {
+    height : 370px;
+}
+
+.bookmark-add-symbol {
+    display:inline-block;
+    vertical-align:middle;
+    padding-bottom:3px;
+    margin-right:2px
+}
+    
+.bookmark-add-link {
+    width:155px;
+    height:1.2em;
+    overflow:hidden;
+    font-weight:bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+    font-size : 1.2em;
+    text-decoration:underline;
+    display: inline-block;
+    white-space:nowrap;
+}
+
+.bookmark-footer {
+    clear : both;
+    positive: relative;
+    z-index : 10;
+    height : 2.2em ;
+    margin-top : -2.2em;
+    margin-bottom : 0px;
+}
+
+.bookmark-footer div {
+    margin-bottom : 5px;
+    margin-left : 0px;
+}
+
+
+#bookmark-list {
+    height : 80px;
+}
